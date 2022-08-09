@@ -1,0 +1,91 @@
+﻿.office-show {
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto 0 auto;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
+    padding: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .office-show {
+        min-width: 50%;
+        max-width: 75%;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .office-show {
+        min-width: 25%;
+        max-width: 35%;
+    }
+}
+.office-show__item {
+    display: flex;
+    justify-content: space-between;
+    margin: 3px 0;
+}
+
+@media screen and (max-width: 768px) {
+    .office-add-container {
+        margin-left: 10px;
+        max-width: 75%;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .office-add-container {
+        max-width: 45%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .office-add-container {
+        max-width: 25%;
+    }
+}
+
+.office-add-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.office-add__element {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    margin: 2px 0;
+    text-align: center;
+}
+.office-add-container:last-child {
+    border-top: 1px solid black;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+.office-show > input[type="submit"] {
+    width: 30%;
+    align-self: flex-end;
+}
+
+.office-show__item {
+    display: flex;
+    justify-content: space-between;
+    margin: 3px 0;
+}
+
+    .office-show__dropdownlist, .office-show__item > input {
+        width: 50%;
+    }
+
+.office-show > input {
+    margin: 3px 0;
+}
+
+.btn-filter-office {
+    margin-left: auto;
+}
+

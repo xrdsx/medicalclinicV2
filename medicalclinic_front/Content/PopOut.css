@@ -1,0 +1,15 @@
+﻿.popout-background {
+    background-color: black;
+    opacity: 0.8;
+}
+
+.popup {
+    background-color: #FFFFFF;
+    border-width: 3px;
+    border-style: solid;
+    border-color: black;
+    padding-top: 10px;
+    padding-left: 10px;
+    width: 300px;
+    height: 300px;
+}

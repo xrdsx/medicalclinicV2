@@ -1,0 +1,114 @@
+﻿.btn-employee-add {
+    width: 20%;
+}
+
+@media screen and (max-width: 768px) {
+    .filters-container {
+        margin-left: 10px;
+        max-width: 75%;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .filters-container {
+        max-width: 45%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .filters-container {
+        max-width: 25%;
+    }
+}
+
+.filters-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.filters-container__element {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px 0;
+    margin: 2px 0;
+    text-align: center;
+}
+
+    .filters-container__element:last-child {
+        border-top: 1px solid black;
+        padding-top: 10px;
+        margin-top: 10px;
+    }
+
+.btn-filter-employee {
+    margin-left: auto;
+}
+
+.filter-label-employee {
+    margin-right: 10px;
+}
+
+.filter-checkbox-employee {
+    transform: scale(1.3);
+}
+
+.filters-container__element--active {
+    background-color: palegreen;
+}
+
+.employee-show {
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto 0 auto;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
+    padding: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .employee-show {
+        min-width: 50%;
+        max-width: 75%;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .employee-show {
+        min-width: 25%;
+        max-width: 35%;
+    }
+}
+
+.employee-show > input[type="submit"] {
+    width: 30%;
+    align-self: flex-end;
+}
+
+.employee-show__item {
+    display: flex;
+    justify-content: space-between;
+    margin: 3px 0;
+}
+
+.employee-show__dropdownlist, .employee-show__item > input {
+    width: 50%;
+}
+    .employee-show > input {
+        margin: 3px 0;
+    }
+
+.employee-show__address {
+    display: flex;
+    flex-direction: column;
+}
+
+    .employee-show__address > input {
+        margin: 3px 0;
+    }
+
+.employee-add-user {
+    margin-top: 25px;
+}

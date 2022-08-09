@@ -1,0 +1,111 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="medicalclinic.SiteMaster" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medical Clinic</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <link href="~/Content/bootstrap/bootstrap.css" type="text/css" rel="stylesheet" runat="server" />
+    <link href="~/Content/bootstrap/bootstrap-theme.css" type="text/css" rel="stylesheet" runat="server" />
+    <link href="~/Content/Default.css" type="text/css" rel="stylesheet" runat="server" />
+    <link href="~/Content/Employee.css" type="text/css" rel="stylesheet" runat="server" />
+    <link href="~/Content/Office.css" type="text/css" rel="stylesheet" runat="server" />
+    <link href="~/Content/PopOut.css" type="text/css" rel="stylesheet" runat="server" />
+    <link href="./Content/UserManagment.css" rel="stylesheet" />
+    <link href="./Content/EditFormStyle.css" rel="stylesheet" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" runat="server" href="~/">Medical Clinic</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                <asp:Panel ID="AdminPanel" runat="server" Visible="false">
+                     <ul class="nav navbar-nav">
+                        <li><a runat="server" href="~/">Home</a></li>
+                         <li><a runat="server" href="~/EmployeeManagement">Employee</a></li>
+                        <li><a runat="server" href="~/ListPatients">Patient</a></li>
+                        <li><a runat="server" href="~/OfficesManagement">Offices</a></li>
+                        <li><a runat="server" href="~/MyAppointments">Calendar</a></li>
+                        <li><asp:LinkButton Text="Users" runat="server" href="./UserManagment" OnClick="Users_Click"/></li>
+                        <li><asp:LinkButton class="link-secondary" Text="Logout" runat="server" OnClick="LogOut_Click"/></li>
+                    </ul>
+                </asp:Panel>
+                    <asp:Panel ID="SuperAdminPanel" runat="server" Visible="false">
+                     <ul class="nav navbar-nav">
+                        <li><a runat="server" href="~/">Home</a></li>
+                        <li><a runat="server" href="~/EmployeeManagement">Employee</a></li>
+                        <li><a runat="server" href="~/Reception">Reception</a></li>
+                        <li><a runat="server" href="~/OfficesManagement">Offices</a></li>
+                        <li><a runat="server" href="~/Calendar">Calendar</a></li>
+                         <li><asp:LinkButton Text="Users" runat="server" href="./UserManagment" OnClick="Users_Click"/></li>
+                        <li><asp:LinkButton class="link-secondary" Text="Logout" runat="server" OnClick="LogOut_Click"/></li>
+                    </ul>
+                </asp:Panel>
+                     <asp:Panel ID="EmployeePanel" runat="server" Visible="false">
+                     <ul class="nav navbar-nav">
+                        <li><a runat="server" href="~/">Home</a></li>
+                        <li><a runat="server" href="~/EmployeeManagement">Employee</a></li>
+                        <li><a runat="server" href="~/ListPatients">Patient</a></li>
+                        <li><a runat="server" href="~/OfficesManagement">Offices</a></li>
+                        <li><a runat="server" href="~/Calendar">Calendar</a></li>
+                        <li><asp:LinkButton class="link-secondary" Text="Logout" runat="server" OnClick="LogOut_Click"/></li>
+                    </ul>
+                </asp:Panel>
+                     <asp:Panel ID="DoctorPanel" runat="server" Visible="false">
+                     <ul class="nav navbar-nav">
+                        <li><a runat="server" href="~/">Home</a></li>
+                        <li><a runat="server" href="~/Calendar">Calendar</a></li>
+                        <li><asp:LinkButton class="link-secondary" Text="Logout" runat="server" OnClick="LogOut_Click"/></li>
+                    </ul>
+                </asp:Panel>
+                </div>
+            </div>
+        </div>
+        <div class="container body-content" style="position: relative">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+
+</body>
+</html>

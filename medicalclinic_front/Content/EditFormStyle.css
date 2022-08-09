@@ -1,0 +1,94 @@
+﻿/*UserManagment*/
+
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.edit-form-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 81px);
+}
+
+.edit-form, .new-user {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+    background-color: rgba(65, 105, 225, 0.7);
+    box-shadow: 3px 3px 20px #000;
+    height: 300px;
+}
+
+.btn-editform {
+    width: 50%;
+}
+
+.role-box,
+.login-box,
+.active-checkbox-box,
+.btns-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dropdown-editform,
+.login-editform {
+    width: 75%;
+}
+
+.change-pass-editform,
+.dropdown-label,
+.login-label, 
+.checkbox-label {
+    color: #fff;
+    margin-bottom: 0;
+}
+/* CreateNewUser*/
+
+.new-user-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 81px);
+}
+
+.new-user {
+    height: 200px;
+    justify-content: center;
+}
+
+.new-user__info {
+    display: block;
+    text-align: center;
+}
+
+.new-user__dropdown-box {
+    display: flex;
+    justify-content: center;
+}
+
+.new-user__dropdown {
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+}
+
+.new-user__btns-box {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.new-user__btn-ok {
+    width: 45%;
+}
+
+.new-user__btn-cancel {
+    width: 45%;
+}
